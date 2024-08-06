@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:32610").setExtent([-527440.381567, 4880109.570870, 3115736.854116, 6857568.479128]);
+//ol.proj.get("EPSG:32610").setExtent([-501849.736872, 4994104.260876, 3141327.498811, 6971563.169133]);
 var wms_layers = [];
 
 var format_AlbertaBoundary_0 = new ol.format.GeoJSON();
@@ -29,7 +29,7 @@ var lyr_AlbertaWaterbodies_1 = new ol.layer.Vector({
                 source:jsonSource_AlbertaWaterbodies_1, 
                 style: style_AlbertaWaterbodies_1,
                 popuplayertitle: "Alberta Waterbodies",
-                interactive: true,
+                interactive: false,
                 title: '<img src="styles/legend/AlbertaWaterbodies_1.png" /> Alberta Waterbodies'
             });
 var format_FishStocking2024_2 = new ol.format.GeoJSON();
@@ -63,7 +63,7 @@ lyr_AlbertaWaterbodies_1.set('fieldImages', {'fid': 'TextEdit', 'HYDROUID': 'Tex
 lyr_FishStocking2024_2.set('fieldImages', {'DISTRICT': 'TextEdit', 'WATERBODY': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'SPECIES': 'TextEdit', 'GENOTYPE': 'TextEdit', 'STOCKED -': 'TextEdit', 'STOCKING N': 'TextEdit', 'PLANNED ST': 'TextEdit', 'Map Author': 'TextEdit', 'NumStock': 'Range', });
 lyr_AlbertaBoundary_0.set('fieldLabels', {'fid': 'no label', 'PRUID': 'no label', 'DGUID': 'no label', 'PRNAME': 'no label', 'PRENAME': 'no label', 'PRFNAME': 'no label', 'PREABBR': 'no label', 'PRFABBR': 'no label', 'LANDAREA': 'no label', });
 lyr_AlbertaWaterbodies_1.set('fieldLabels', {'fid': 'no label', 'HYDROUID': 'no label', 'NAME': 'no label', 'RANK': 'no label', 'PRUID': 'no label', 'fid_2': 'no label', 'PRUID_2': 'no label', 'DGUID': 'no label', 'PRNAME': 'no label', 'PRENAME': 'no label', 'PRFNAME': 'no label', 'PREABBR': 'no label', 'PRFABBR': 'no label', 'LANDAREA': 'no label', });
-lyr_FishStocking2024_2.set('fieldLabels', {'DISTRICT': 'inline label - visible with data', 'WATERBODY': 'inline label - visible with data', 'Latitude': 'hidden field', 'Longitude': 'hidden field', 'SPECIES': 'inline label - visible with data', 'GENOTYPE': 'inline label - visible with data', 'STOCKED -': 'hidden field', 'STOCKING N': 'hidden field', 'PLANNED ST': 'inline label - always visible', 'Map Author': 'header label - always visible', 'NumStock': 'inline label - always visible', });
+lyr_FishStocking2024_2.set('fieldLabels', {'DISTRICT': 'inline label - always visible', 'WATERBODY': 'inline label - always visible', 'Latitude': 'hidden field', 'Longitude': 'hidden field', 'SPECIES': 'inline label - always visible', 'GENOTYPE': 'inline label - always visible', 'STOCKED -': 'hidden field', 'STOCKING N': 'hidden field', 'PLANNED ST': 'inline label - always visible', 'Map Author': 'header label - always visible', 'NumStock': 'inline label - always visible', });
 lyr_FishStocking2024_2.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
